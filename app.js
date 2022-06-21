@@ -1,6 +1,8 @@
 const express = require("express")
 const app = express()
 const path = require("path")
+const PORT = process.env.PORT || 3000;
+
 
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"/views/home.html"))
@@ -23,5 +25,5 @@ app.get("/register",(req,res)=>{
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3000,()=>console.log("Este es el inicio"))
+app.listen(PORT,()=>console.log("Este es el inicio"))
 
