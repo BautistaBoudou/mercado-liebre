@@ -8,18 +8,25 @@
     </head>
     <body>
         <div class="logo">
-            <img src="/images/logo-mercado-liebre.svg">
+            <a href="/"><img src="/images/logo-mercado-liebre.svg"></a>
         </div>
         <main>
             <div class="login">
                 <h1>Hola! Ingresá con tu email</h1>
                 <form action="/login" method="POST">
-                    <label for="email">e-mail:</label>
-                    <input type="email" name="email" id="email">
-                    <label for="password">password:</label>
-                    <input type="password" name="password" id="password">
+                    <div class="datosUsuario">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="datosUsuario">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
                     <input class="login-button" type="submit" value="Login">
                 </form>
+                <div class="rutaCrearCuenta">
+                    <p>No tienes cuenta?<a href="/register"> Crear Cuenta</a></p>
+                </div>
             </div>
         </main>
         <footer>

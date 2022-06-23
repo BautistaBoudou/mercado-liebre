@@ -8,19 +8,57 @@
     </head>
     <body>
         <div class="logo">
-            <img src="/images/logo-mercado-liebre.svg">
+            <a href="/"><img src="/images/logo-mercado-liebre.svg"></a>
         </div>
         <main>
             <div class="login">
                 <h1>Hola! Ingresá tus datos</h1>
                 <form action="/register" method="POST">
-                    <label for="name">Nombre y Apellido</label>
-                    <input type="text" id="name">
-                    <label for="email">Ingresá tu e-mail:</label>
-                    <input type="email" name="email" id="email">
-                    <label for="password">password:</label>
-                    <input type="password" name="password" id="password">
-                    <input class="login-button" type="submit" value="Login">
+                    <div class="datosUsuario">
+                        <label for="name">Nombre</label>
+                        <input type="text" placeholder="Ingresá tu nombre" id="name">
+                    </div>
+                    <div class="datosUsuario">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" placeholder="Ingresá tu apellido" id="lastname">
+                    </div>
+                    <div class="datosUsuario">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Ingresá tu e-mail" id="email">
+                    </div>
+                    <div class="datosUsuario">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                        <label>Confirmá tu contraseña</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <h4>Perfil de usuario</h4>
+                    <div class="radios">
+                        <label for="tipoDeUsuario">Comprar</label>
+                        <label for="tipoDeUsuario">Vender</label>
+                        <input type="radio" name="tipoDeUsuario" value="Comprar" checked>
+                        <input type="radio" name="tipoDeUsuario" value="Vender">
+                    </div>
+                    <div class="checkboxes">
+                        <h4>Categorías de interés</h4>
+                        <label for="categorias">Electro</label>
+                        <input type="checkbox" name="categorias" value="Electro">
+                        <label for="categorias">Moda</label>
+                        <input type="checkbox" name="categorias" value="Moda">
+                        <label for="categorias">Hogar</label>
+                        <input type="checkbox" name="categorias" value="Hogar">
+                        <label for="categorias">Jugueteria</label>
+                        <input type="checkbox" name="categorias" value="Jugueteria">
+                        <label for="categorias">Vida Sana</label>
+                        <input type="checkbox" name="categorias" value="Vida Sana">
+                    </div>
+                    <div class="fotoPerfil-BorrarDatos">
+                        <label for="fotoDeUsuario">Foto de perfil</label>
+                        <label>Borrar datos</label>
+                        <input class="fotoPerfil" type="image">
+                        <input class="borrar-datos" type="reset" value="X">
+                    </div>
+                    <input class="login-button" type="submit" value="Create Account">
                 </form>
             </div>
         </main>
